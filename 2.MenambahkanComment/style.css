@@ -1,0 +1,12 @@
+/* bagian H1 */
+h1 {
+  color: turquoise;
+  text-align: center;
+}
+
+p {
+  /* bagian P
+2 baris */
+  text-align: justify;
+  font-family: "Courier New", Courier, monospace;
+}
