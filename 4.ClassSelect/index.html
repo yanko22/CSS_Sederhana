@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Select</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Belajar Class Select</h1>
+    <hr />
+    <h2>Class</h2>
+    <ol>
+      <li>
+        Kadang ada kasus ingin Menambahkan style CSS ke beberapa element tag
+        yang jenisnya berbeda;
+      </li>
+      <li>
+        Jika kita harus buat aturannya per tag, maka akan menyulitkan ketika
+        banyak sekali;;
+      </li>
+      <li>
+        Di HTML, semua tag bisa memiliki atribut class, dan di CSS, kita bisa
+        Menambahkan aturan ke class dengan menggunakan awalan .(titik);
+      </li>
+    </ol>
+    <hr />
+    <h2>Contoh</h2>
+    <pre>
+    <code>
+        HTML :
+        &lt;p class="class"&gt; INI PARAGRAF &lt;/p&gt;
+        
+        CSS :
+        .class{
+                color: red;
+                font-size: larger;
+        }
+    </code>
+    </pre>
+    <p class="class">INI PARAGRAF</p>
+    <hr />
+    <h2>Multiple Class</h2>
+    <ol>
+      <li>
+        Nilai dari atribut class bisa menggunakan beberapa nilai, caranya bisa
+        tembahkan pemisah menggunakan spasi
+      </li>
+    </ol>
+    <hr />
+    <h2>Contoh :</h2>
+    <pre>
+        <code>
+            HTML :
+                &lt;h1 class="red upper"&gt; INI PARAGRAF &lt;/h1&gt;
+                &lt;h2 class="red upper"&gt; INI PARAGRAF &lt;/h2&gt;
+
+            CSS :
+                .red{
+                    color: red;
+                }
+                .upper{
+                    text-transform: uppercase;
+                }
+        </code>
+    </pre>
+    <h1 class="red upper">ini paragraf</h1>
+    <h2 class="red upper">ini paragraf</h2>
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.class {
+  color: red;
+  font-size: larger;
+}
+li {
+  margin-bottom: 5px;
+}
+.red {
+  color: red;
+}
+.upper {
+  text-transform: uppercase;
+}
