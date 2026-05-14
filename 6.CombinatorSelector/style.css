@@ -1,0 +1,16 @@
+li {
+  margin-bottom: 10px;
+}
+
+h1.judul {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+/* Descendant Selector */
+div.descendent p {
+  color: red;
+}
+/* Child Selector */
+div.child > p {
+  color: blue;
+}

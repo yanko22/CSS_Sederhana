@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinator Selector</title>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <h1 class="judul">Combinator Selector</h1>
+    <hr />
+    <ul>
+      <li>Combinator adalah sesuatu yang menjelaskan relasi antar selector</li>
+      <li>Terdapat 4 jenis combinator dalam CSS:</li>
+      <ol>
+        <li>Descendant Combinator (spasi)</li>
+        <li>Child Combinator (>)</li>
+        <li>Adjacent Sibling Combinator (+)</li>
+        <li>General Sibling Combinator (~)</li>
+      </ol>
+    </ul>
+    <hr />
+    <h2>Descendant Combinator Selector</h2>
+    <ul>
+      <li>
+        Descendent Selector adalah selector untuk memilih element anak dari
+        element yang dipilih
+      </li>
+      <li>
+        <a href="https://css-tricks.com/almanac/selectors/d/descendant/"
+          >link referensi</a
+        >
+      </li>
+    </ul>
+    <p>
+      pada contoh gambar dibawah ini menunjukan kita memilih element anak dari
+      element yang dipilih
+      <img src="DescendantSelector.png" alt="Gambar Descendant Selector" />
+    </p>
+    <h3>Contoh Pengguaan Descendant Combinator Selector</h3>
+    <pre>
+            <code>
+                HTML :
+                    &lt;div&gt;
+                        &lt;article&gt;
+                            &lt;p&gt; ini paragraf &lt;/p&gt;
+                         &lt;/article&gt;
+                        &lt;p&gt; ini paragraf &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p&gt;ini paragraf&lt;/p&gt;
+
+                CSS :
+                    div p{
+                        color: red;
+                    }
+            </code>
+        </pre>
+    <hr />
+    <p>hasil nya:</p>
+    <div class="descendent">
+      <article>
+        <p>ini akan dipilih</p>
+      </article>
+      <p>ini akan dipilih</p>
+    </div>
+    <p>ini tidak akan dipilih</p>
+    <hr />
+    <p>
+      dari hsail di atas kita dapat melihat dimana semua paragraf yang berada di
+      dalam element div akan dipilih meskipun p pertama berada pada elemen
+      article
+    </p>
+    <hr />
+    <h2>Child Combinator Selector</h2>
+    <hr />
+    <ul>
+      <li>
+        Child Selector adalah selector untuk memilih child / anak dari element
+        yang dipilih
+      </li>
+      <li>
+        <a href="https://css-tricks.com/almanac/selectors/c/child/"
+          >link referensi</a
+        >
+      </li>
+    </ul>
+    pada contoh dibawah ini artinya kita memilih element p yang menjadi anak
+    langsung dari element div
+    <img src="ChildSelector.png" alt="Gambar Child Selector" />
+    <hr />
+    Contoh Penggunaan Child Combinator Selector :
+    <pre>
+            <code>
+                HTML :
+                    &lt;div&gt;
+                        &lt;article&gt;
+                            &lt;p&gt; ini paragraf &lt;/p&gt;
+                         &lt;/article&gt;
+                        &lt;p&gt; ini paragraf &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p&gt;ini paragraf&lt;/p&gt;
+
+                CSS :
+                    div > p{
+                        color: red;
+                    }
+            </code>
+        </pre>
+    <div class="child">
+      <article>
+        <p>ini paragraf</p>
+      </article>
+      <p>ini paragraf</p>
+    </div>
+    <p>ini paragraf</p>
+  </body>
+</html>
