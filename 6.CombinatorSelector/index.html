@@ -107,6 +107,7 @@
                     }
             </code>
         </pre>
+    hasil dari contoh di atas adalah :
     <div class="child">
       <article>
         <p>ini paragraf</p>
@@ -114,5 +115,119 @@
       <p>ini paragraf</p>
     </div>
     <p>ini paragraf</p>
+    <hr />
+    <h2>Adjacent Sibling Combinator Selector</h2>
+    <ul>
+      <li>
+        adjacent sibling selector digunakan unutk memilih elemen setelah element
+        yang dipilih
+      </li>
+      <li>Sibling (saudara) element harus memiliki parent yang sama</li>
+      <li>
+        <a href="https://css-tricks.com/almanac/selectors/a/adjacent-sibling/"
+          >Link referensi</a
+        >
+      </li>
+    </ul>
+    <p>
+      Pada gambar di bawah ini menunjukkan penggunaan adjacent sibling selector:
+    </p>
+    <img
+      src="AdjacentSiblingSelector.png"
+      alt="Gambar Adjacent Sibling Selector"
+    />
+    <hr />
+    <p>Contoh Penggunaan Adjacent Sibling Combinator Selector:</p>
+    <pre>
+            <code>
+                HTML :
+                    &lt;div&gt;
+                        &lt;article&gt;
+                            &lt;p&gt; ini tidak akan dipilih &lt;/p&gt;
+                         &lt;/article&gt;
+                        &lt;p&gt; ini ini tidak akan dipilih &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p&gt;ini akan dipilih&lt;/p&gt;
+                    &lt;p&gt;ini tidak akan dipilih&lt;/p&gt;
+
+                CSS :
+                    div + p{
+                        color: red;
+                    }
+            </code>
+        </pre>
+    hasil dari contoh di atas adalah :
+    <div class="adjacent-sibling">
+      <article>
+        <p>ini tidak akan dipilih</p>
+      </article>
+      <p>ini tidak akan dipilih</p>
+    </div>
+    <p>ini akan dipilih</p>
+    <p>ini tidak akan dipilih</p>
+    <p>
+      dari hasil diatas didapatkan perubahan warna pada paragraf yang merupakan
+      saudara langsung dari element p setelah div hanya terjadi pada p bagian
+      pertama saja setelah div
+    </p>
+    <hr />
+    <h2>General Sibling Combinator Selector</h2>
+    <ul>
+      <li>
+        General Sibling Selector digunakna untuk memilih suluruh element saudara
+        dari element yang dipilih, dimana harus memiliki parent element yang
+        sama
+      </li>
+      <li>
+        <a href="https://css-tricks.com/almanac/selectors/g/general-sibling/"
+          >Link referensi</a
+        >
+      </li>
+    </ul>
+    <p>
+      pada contoh dibawah ini adalah memilih semua element p dari saudara
+      element div dimana div dan parent harus memiliki parent yang sama
+    </p>
+    <img
+      src="GeneralSiblingSelector.png"
+      alt="Gambar General Sibling Selector"
+    />
+    <p>contoh penggunaan:</p>
+    <pre>
+            <code>
+                HTML :
+                    &lt;p&gt; ini tidak akan dipilih &lt;/p&gt;
+                    &lt;div&gt;
+                        &lt;article&gt;
+                            &lt;p&gt; ini tidak akan dipilih &lt;/p&gt;
+                         &lt;/article&gt;
+                        &lt;p&gt; ini ini tidak akan dipilih &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p&gt;ini akan dipilih&lt;/p&gt;
+                    &lt;p&gt;ini akan dipilih&lt;/p&gt;
+
+                CSS :
+                    div ~ p{
+                        color: red;
+                    }
+            </code>
+        </pre>
+    <p>hasil dari contoh di atas adalah :</p>
+    <p>ini tidak akan dipilih</p>
+    <div>
+      <div class="general-sibling">
+        <article>
+          <p>ini tidak akan dipilih</p>
+        </article>
+        <p>ini ini tidak akan dipilih</p>
+      </div>
+      <p>ini akan dipilih</p>
+      <p>ini akan dipilih</p>
+    </div>
+    <p>
+      dari percobaan ini didapatkan bahwa General Sibling Selector akan memilih
+      semua elemen saudara yang muncul setelah elemen yang dipilih, selama
+      mereka memiliki parent yang sama.
+    </p>
   </body>
 </html>
