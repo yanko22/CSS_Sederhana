@@ -14,3 +14,7 @@ div.descendent p {
 div.child > p {
   color: blue;
 }
+/* Adjancent Sibling Selector */
+div.adjacent + p {
+  color: blue;
+}

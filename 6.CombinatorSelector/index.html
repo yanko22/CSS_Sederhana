@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -103,16 +103,81 @@
 
                 CSS :
                     div > p{
-                        color: red;
+                        color: blue;
                     }
             </code>
         </pre>
     <div class="child">
       <article>
-        <p>ini paragraf</p>
+        <p>Tidak dipilih</p>
       </article>
-      <p>ini paragraf</p>
+      <p>Dipilih</p>
     </div>
-    <p>ini paragraf</p>
+    <p>Tidak Dipilih</p>
+    <hr />
+    <h2>Adjacent Sibling Selector</h2>
+    <ul>
+      <li>
+        Adjacent Sibling Selector digunakan untuk memilih element setelah
+        element yang dipilih
+      </li>
+      <li>Sibling (sudara) element harus memiliki perent elemnt yang sama</li>
+      <li>
+        <a href="https://css-tricks.com/almanac/selectors/a/adjacent-sibling/"
+          >Link referensi</a
+        >
+      </li>
+    </ul>
+    <p>
+      pada gambar dibawah ini artinya memilih element p yang diletakkan setelah
+      element div dimana p dan div memiliki parent yang sama
+    </p>
+    <img src="AdjacentSiblingSelector.png" alt="adjacent-sibling" />
+    <p>Contoh Code :</p>
+    <pre>
+            <code>
+                HTML :
+                    &lt;div&gt;
+                        &lt;article&gt;
+                            &lt;p&gt; ini Tidak Dipilih &lt;/p&gt;
+                         &lt;/article&gt;
+                        &lt;p&gt; ini Tidak Dipilih &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;p&gt;ini dipilih&lt;/p&gt;
+                    &lt;p&gt;ini Tidak dipilih&lt;/p&gt;
+
+                CSS :
+                    div + p{
+                        color: blue;
+                    }
+            </code>
+        </pre>
+    Hasilnya :
+    <div class="adjacent">
+      <article>
+        <p>ini Tidak Dipilih</p>
+      </article>
+      <p>ini Tidak Dipilih</p>
+    </div>
+    <p>ini dipilih</p>
+    <p>ini Tidak dipilih</p>
+    <p>penjelasan</p>
+    <p>
+      pada contoh diatas didapatkan bahwa p yang diambil ada p dengan posisi
+      setalah div dimana p tersebut adalah sudora atau bisa dibilang memiliki
+      parant yang sama dan terletar setalah nya
+    </p>
+    <h2>General Sibling Selector</h2>
+    <ul>
+      <li>
+        General Sibling Selector digunakna untuk memilih seluruh element saudara
+        dari elemnet yang dipilih, dimana haru memiliki parent yang sama
+      </li>
+      <li>
+        <a href="https://css-tricks.com/almanac/selectors/g/general-sibling/"
+          >ling referensi</a
+        >
+      </li>
+    </ul>
   </body>
 </html>
