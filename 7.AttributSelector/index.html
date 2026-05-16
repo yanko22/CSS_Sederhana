@@ -1,9 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atribut Selector</title>
+    <style>
+      .contoh1 a {
+        text-decoration: none;
+      }
+      .contoh1 {
+        a[target] {
+          color: red;
+        }
+      }
+    </style>
   </head>
   <body>
     <h1>Atribut Selector</h1>
@@ -14,5 +24,41 @@
       </li>
       <li>Terdapat banyak cara untuk menggunakan Attribute Selector</li>
     </ul>
+    <hr />
+    <h2>CSS [atribut] Selector</h2>
+    <p>
+      pada gambar bawah ini artinya memilih semua element yang memiliki atribut
+      targer
+    </p>
+    <img src="img/1.CSSAttributSelector.png" alt="CSSAttributSelector" />
+    <p>contoh penerapan</p>
+    <pre>
+      <code>
+        TML :
+        &lt;a href="#" target="_blank"&gt; Ini Menjadi Target&lt;/a&gt;
+        &lt;a href="#"&gt; Ini Tidak Menjadi Target&lt;/a&gt;
+        &lt;a href="#" target="_blank"&gt; Ini Menjadi Target&lt;/a&gt;
+        &lt;a href="#"&gt; Ini Tidak Menjadi Target&lt;/a&gt;
+        
+        CSS :
+        a[target]{
+          color: red
+        }
+      </code>
+    </pre>
+    <p>Hasilnya adalah sebagaimana berikut :</p>
+    <div class="contoh1">
+      <a href="#" target="_blank">dipilih</a><br />
+      <a href="#">tidak dipilih</a><br />
+      <a href="#" target="_blank">dipilih</a><br />
+      <a href="#">tidak dipilih</a>
+    </div>
+    <hr />
+    <h2>CSS [attribute="value"] selector</h2>
+    <p>
+      pada gambar dibawah ini artinya memilih semua element a yang memiliki
+      atribut dengan nilai "_blank" <img src="img/2.CSSAttrinutSelector.png"
+      alt="attribute="value"">
+    </p>
   </body>
 </html>
