@@ -1,17 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atribut Selector</title>
     <style>
+      a {
+        text-decoration: none;
+      }
       .contoh1 a {
         text-decoration: none;
       }
-      .contoh1 {
-        a[target] {
-          color: red;
-        }
+      .contoh1 a[target] {
+        color: red;
+      }
+      .contoh2 a[target="_blank"] {
+        color: red;
+      }
+      .contoh3 p[title~="belajar"] {
+        color: red;
+      }
+      .contoh4 p[title|="belajar"] {
+        color: blue;
+      }
+      .contoh5 p[title^="belajar"] {
+        color: green;
+      }
+      .contoh6 p[title$="belajar"] {
+        color: blue;
+      }
+      .contoh7 p[title*="belajar"] {
+        color: blue;
       }
     </style>
   </head>
@@ -57,8 +76,226 @@
     <h2>CSS [attribute="value"] selector</h2>
     <p>
       pada gambar dibawah ini artinya memilih semua element a yang memiliki
-      atribut dengan nilai "_blank" <img src="img/2.CSSAttrinutSelector.png"
-      alt="attribute="value"">
+      atribut dengan nilai "_blank"
+    </p>
+    <br />
+    <img src="img/2.CSSAttrinutSelector.png" /><br />
+    <a href="https://css-tricks.com/almanac/selectors/a/attribute"
+      >Link Referensi</a
+    ><br />
+    <hr />
+    contoh penerapan :
+    <pre>
+      <code>
+        HTML :
+          &lt;a href="#" target="_blank"&gt; Ini Menjadi Target&lt;/a&gt;
+          &lt;a href="#" &gt; Ini Tidak Menjadi Target&lt;/a&gt;
+          &lt;a href="#" target="_self"&gt; Ini Tidak Menjadi Target&lt;/a&gt;
+          &lt;a href="#"&gt; Ini Tidak Menjadi Target&lt;/a&gt;
+        CSS :
+          a[target="_blank"]{
+            color: red
+          }
+        
+      </code>
+    </pre>
+    <p>Hasilnya adalah sebagaimana berikut :</p>
+    <div class="contoh2">
+      <a href="#" target="_blank">dipilih</a><br />
+      <a href="#">tidak dipilih</a><br />
+      <a href="#" target="_self">tidak dipilih</a><br />
+      <a href="#">tidak dipilih</a><br />
+    </div>
+    <hr />
+    <h2>CSS [attribute~="value"] Selector</h2>
+    <p>
+      gambar dibawah ini artinya memilih seua elemet p yang memiliki atribut
+      title yang terdapat kata belajar
+    </p>
+    <img src="img/3.CSSAttrinutSelector.png" alt="CSSAttributSelector" />
+    <img src="img/4.CSSAttrinutSelector.png" alt="CSSAttributSelector" /><br />
+    <a href="https://css-tricks.com/almanac/selectors/a/attribute"
+      >Link Referensi</a
+    ><br />
+    <hr />
+    contoh penerapan :
+    <pre>
+      <code>
+        HTML :
+          &lt;p title="belajar css"&gt; Ini Menjadi Target&lt;/p&gt;
+          &lt;p title="belajarjavascript"&gt; Ini Tidak Menjadi Target&lt;/p&gt;
+        CSS : 
+          p[title~="belajar"]{
+            color: red
+          }
+      </code>
+    </pre>
+    <div class="contoh3">
+      <p title="belajar css">Ini Menjadi Target</p>
+      <p title="belajarjavascript">Ini Tidak Menjadi Target</p>
+      <a href="#"></a>
+    </div>
+    <p>
+      pada hal ini value title harus memiliki kata "belajar" dengan penulisan
+      yang sama persis deklarasi pada CSSnya bisa berada di awal, tengah, atau
+      akhir dari value atributnya
+    </p>
+    <hr />
+    <h2>CSS [attribute|="value"] Selector</h2>
+    <p>
+      pada gambar dibawah ini artinya semua element p yang memiliki atribut
+      title yang memiliki value "belajar" aday "belajar" yang diikuti karakter
+      lain
+    </p>
+    <img src="img/5.CSSAttrinutSelector.png" alt="CSSAttributSelector" /> <br />
+    <img src="img/6.CSSAttrinutSelector.png" alt="CSSAttributSelector" />
+    <a href="https://css-tricks.com/almanac/selectors/a/attribute"
+      >Link Referensi</a
+    ><br />
+    <hr />
+    contoh penerapan :
+    <pre>
+      <code>
+        HTML :
+        &lt;p title="belajar pemrograman"&gt; Ini Tidak Menjadi Target&lt;/p&gt;
+        &lt;p title="belajart"&gt; In iMenjadi Target&lt;/p&gt;
+        &lt;p title="belajar-javascript"&gt; Ini Menjadi Target&lt;/p&gt;
+        &lt;p title="belajarcss"&gt; Ini tidak Menjadi Target&lt;/p&gt;
+        CSS :
+        p[title|="belajar"]{
+          color: red
+        }
+      </code>
+    </pre>
+    <div class="contoh4">
+      <p title="belajar pemrograman">Ini Tidak Menjadi Target</p>
+      <p title="belajar">Ini Menjadi Target</p>
+      <p title="belajar-javascript">Ini Menjadi Target</p>
+      <p title="belajarcss">Ini Tidak Menjadi Target</p>
+    </div>
+    pada hal ini nilai dari title harus memiliki kata belajar jika pun terdiri
+    dari 2 kata dapat dipisahkan menggunakan tanda kurang (-) atau kata itu
+    berdiri sendiri
+    <hr />
+    <h2>CSS [attribute^="value"] Selector</h2>
+    <p>
+      pada gambar dibawah ini dapat diartikan kita memilih semua element p yang
+      memiliki atribut title yang memiliki value yang dimulai dengan "belajar"
+    </p>
+    <img src="img/7.CSSAttrinutSelector.png" alt="CSSAttributSelector" /> <br />
+    <img src="img/8.CSSAttrinutSelector.png" alt="CSSAttributSelector" />
+    <p>contoh penggunaan:</p>
+    <pre>
+      <code>
+        HTML :
+        &lt;p title="belajar pemrograman"&gt; Ini Menjadi Target&lt;/p&gt;
+        &lt;p title="belajar"&gt; In iMenjadi Target&lt;/p&gt;
+        &lt;p title="belajar-javascript"&gt; Ini Menjadi Target&lt;/p&gt;
+        &lt;p title="belajarcss"&gt; Ini Menjadi Target&lt;/p&gt;
+        &lt;p title="cssbelajar"&gt; Ini Menjadi Target&lt;/p&gt;
+        
+        CSS :
+        p[title^="belajar"]{
+          color: green
+        }
+      </code>
+    </pre>
+    <div class="contoh5">
+      <p title="belajar pemrograman">Ini Menjadi Target</p>
+      <p title="belajar">In iMenjadi Target</p>
+      <p title="belajar-javascript">Ini Menjadi Target</p>
+      <p title="belajarcss">Ini Menjadi Target</p>
+      <p title="css-belajar">Ini Tidak Menjadi Target</p>
+    </div>
+    pada hal ini nilai dari title harus memiliki kata belajar yang berada di
+    awal value atributnya
+    <hr />
+    <h2>CSS [attribute$="value"] Selector</h2>
+    <p>
+      pada gambar dibawah ini dapat diartikan memilih semua element p yg
+      memiliki atribut titel yang memiliki value yang diakhiri dengan "belajar"
+    </p>
+    <img src="img/9.CSSAttrinutSelector.png" alt="CSSAttributSelector" /> <br />
+    <img src="img/10.CSSAttrinutSelector.png" alt="CSSAttributSelector" />
+    <p>contoh penggunaan:</p>
+    <pre>
+      <code>
+        HTML :
+        &lt;p title="belajar pemrograman"&gt; Ini Tidak Menjadi Target&lt;/p&gt;
+        &lt;p title="belajar"&gt; Ini Menjadi Target&lt;/p&gt;
+        &lt;p title="belajar-javascript"&gt; Ini Tidak Menjadi Target&lt;/p&gt;
+        &lt;p title="belajarcss"&gt; Ini tidak Menjadi Target&lt;/p&gt;
+        &lt;p title="cssbelajar"&gt; Ini Menjadi Target&lt;/p&gt;
+        
+        CSS :
+        p[title$="belajar"]{
+          color: blue
+        }
+      </code>
+    </pre>
+    <div class="contoh6">
+      <p title="belajar pemrograman">Ini Tidak Menjadi Target</p>
+      <p title="belajar">Ini Menjadi Target</p>
+      <p title="belajar-javascript">Ini Tidak Menjadi Target</p>
+      <p title="belajarcss">Ini Tidak Menjadi Target</p>
+      <p title="css-belajar">Ini Menjadi Target</p>
+    </div>
+    <hr />
+    <h2>CSS [attribute*="value"] Selector</h2>
+    <p>
+      pada gambar disampinh artinya kita memilih semua elemnent p yang memiliki
+      atribut title dan mengadung kata belajar
+    </p>
+    <img src="img/11.CSSAttrinutSelector.png" alt="CSSAttributSelector" />
+    <br />
+    <img src="img/12.CSSAttrinutSelector" alt="CSSAttributSelector" />
+    <p>contoh penggunaan:</p>
+    <pre>
+      <code>
+        HTML :
+        &lt;p title="belajar pemrograman"&gt; Ini Menjadi Target&lt;/p&gt;
+        &lt;p title="belajar"&gt; Ini Menjadi Target&lt;/p&gt;
+        &lt;p title="belajar-javascript"&gt; Ini Menjadi Target&lt;/p&gt;
+        &lt;p title="belajarcss"&gt; Ini Menjadi Target&lt;/p&gt;
+        &lt;p title="cssbelajar"&gt; Ini Menjadi Target&lt;/p&gt;
+        
+        CSS :
+        p[title$="belajar"]{
+          color: blue
+        }
+      </code>
+    </pre>
+    <div class="contoh7">
+      <p title="belajar pemrograman">Ini Menjadi Target</p>
+      <p title="belajar">Ini Menjadi Target</p>
+      <p title="belajar-javascript">Ini Menjadi Target</p>
+      <p title="belajarcss">Ini Menjadi Target</p>
+      <p title="cssbelajar">Ini Menjadi Target</p>
+    </div>
+    <p>Attribut selector tanpa tag</p>
+    <ul>
+      S
+      <li>
+        saat menggunakan attribut selector nama tag sebenarnya tidak wajib, jadi
+        kita bisa langsung menggunakan attribute selector
+      </li>
+      <li>attribute selector juga bisa digunakan pada class dan id</li>
+      <li>
+        <a href="https://css-tricks.com/almanac/selectors/a/attribute/"
+          >link ke dokumentasi CSS attribute selector</a
+        >
+      </li>
+    </ul>
+    <p>ilustrasi penggunaan</p>
+    <img src="img/13.CSSAttrinutSelector.png" alt="CSSAttributeSelector" />
+    <p>
+      pada gambar diatas kita memilih semua element yang memiliki atribute title
+      tanpa menyebutkan nama tagnya
+    </p>
+    <img src="img/14.CSSAttrinutSelector.png" alt="CSSAttributeSelector" />
+    <p>
+      pada gambar diatas kita memilih semua tag dengan dengan class bervelue
+      article dengan tag title bervalue "belajar" akan dipilih
     </p>
   </body>
 </html>
