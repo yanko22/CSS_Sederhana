@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font</title>
+    <style>
+      .fontfam h1 {
+        font-family: fantasy;
+      }
+      .fontfam p {
+        font-family: Arial;
+      }
+      [title="style"] {
+        font-style: oblique 10deg;
+      }
+      [title="weight"] {
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Font</h1>
+    <hr />
+    <ul>
+      <li>
+        Saat membuat tulisan, biasanya Web Browser akan menggunakan font default
+        nya dan tiap browser memiliki font default yang berbeda
+      </li>
+      <li>
+        saat membuat web, baiknya menggunakan font yang sama sehingga tampilan
+        web lebih konsisten
+      </li>
+      <li>
+        kita bisa mengatur font di halaman HTML mengunakan CSS dengan
+        menggunakan property font
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font">
+          Font - MDN Web Docs
+        </a>
+      </li>
+    </ul>
+    <hr />
+    <h2>Font Family</h2>
+    <ul>
+      <li>
+        Untuk mengubah jenis font, kita bisa menggunakan property font-family
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">
+          Font Family - MDN Web Docs
+        </a>
+      </li>
+      <li>
+        menggunakan font-family sengat tergantung dengan sistem operasi yang
+        digunakan, juka font nya tida ada di sistem operasi yagn digunakan, maka
+        hasilnya tidak akan sesuai dengan yang kita mau
+      </li>
+      <li>
+        kita bisa menggunakan generic font family yang sudah menjadi standar
+        untuk CSS
+      </li>
+      <li>
+        kita bisa melihat daftar generic family name disini
+        <p>
+          <a href="https://www.w3.org/TR/css-fonts-3/#generic-font-families">
+            Generic Font Families - W3C
+          </a>
+        </p>
+      </li>
+    </ul>
+    <p>contoh penggunaan font-family:</p>
+    <div class="fontfam">
+      <h1>Contoh Font Family</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+        perspiciatis!
+      </p>
+    </div>
+    <hr />
+    <h2>Font Style</h2>
+    <ul>
+      <li>
+        Untuk mengubah style dari font, kita bisa menggunakan property
+        font-style
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-style">
+          Font Style - MDN Web Docs
+        </a>
+      </li>
+      <li>
+        Untuk mengubah ketebalan dari font, kita bisa menggunakan property
+        font-weight
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight">
+          Font Weight - MDN Web Docs
+        </a>
+      </li>
+    </ul>
+    <hr />
+    <p>contoh penggunaan font-style dan font-weight</p>
+    <div class="FontStyle">
+      <h1>Font Style</h1>
+      <p title="style">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, modi!
+      </p>
+      <h1>Font Weight</h1>
+      <p title="weight">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, dolorem?
+      </p>
+    </div>
+    <hr />
+  </body>
+</html>
