@@ -1,0 +1,37 @@
+.percobaan {
+  background-color: lightblue;
+  margin: 0px;
+  padding: 0px;
+}
+.percobaan [title="Percobaan1"] {
+  background-color: lightgreen;
+  margin: 0px;
+  padding: 0px;
+  height: 100px;
+}
+.percobaan [title="Percobaan2"] {
+  background-color: lightcoral;
+  margin: 0px;
+  padding: 0px;
+  height: 100px;
+}
+.percobaan p {
+  margin: 0px;
+  padding: 10px;
+}
+.percobaan1 {
+  background-color: blue;
+}
+.percobaan2 {
+  width: 200px;
+  background-color: red;
+}
+span.catatan {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: gray;
+  width: 400px;
+  background-color: lightyellow;
+  height: 50px;
+}
