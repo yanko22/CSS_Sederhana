@@ -1,0 +1,6 @@
+.contoh {
+  background-color: lightblue;
+  width: 80%;
+  min-width: 200px; /*mengatur dari lebar minimal dari jendela */
+  max-width: 600px; /*mengatur dari lebar maksimal dari jendela */
+}
