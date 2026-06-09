@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border</title>
+  </head>
+  <body>
+    <h1>Border</h1>
+    <hr />
+    <ul>
+      <li>Dalam Box model, terdapat bagian Border</li>
+      <li>Border adalah garis yang mengelilingi elemen</li>
+      <li>Untuk mengatur border, kita dapat menggunakan properti border</li>
+      <li>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style"
+          target="_blank"
+          >Border Style</a
+        >
+      </li>
+    </ul>
+    <div>
+      <h2>Contoh Border</h2>
+      <div style="border: 2px dotted black; padding: 10px">
+        Ini adalah contoh border
+      </div>
+      <div
+        style="
+          border-left: 3px dashed red;
+          border-top: 3px solid blue;
+          border-right: 10px double green;
+          border-bottom: 3px dashed green;
+          padding: 10px;
+          margin-top: 10px;
+        ">
+        Ini adalah contoh border
+      </div>
+      <div
+        style="
+          border: double orange;
+          border-width: 20px 40px 60px 80px;
+          border-radius: 10px;
+          padding: 10px;
+          margin-top: 10px;
+        ">
+        Ini adalah contoh border dengan border-radius
+      </div>
+    </div>
+    <hr />
+    <h2>Border Detail</h2>
+    <ul>
+      <li>
+        Kadang kita ingin mengubah border tiap sisi berbeda, kita bisa
+        menggunakan properti border-top, border-right, border-bottom, dan
+        border-left
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en_US/docs/Web/CSS/border-left"
+          >Border Left</a
+        >
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en_US/docs/Web/CSS/border-right"
+          >Border Right</a
+        >
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en_US/docs/Web/CSS/border-top"
+          >Border Top</a
+        >
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en_US/docs/Web/CSS/border-bottom"
+          >Border Bottom</a
+        >
+      </li>
+    </ul>
+    <hr />
+    <h2>Border Radius</h2>
+    <ul>
+      <li>Border Radius adalah untuk mengubah putaran dari sudut border</li>
+      <li>Secara otomatis isi dari padding pun akan mengikuti dari border</li>
+      <li>kita dapat mengubahnya dengan properti border-radius</li>
+      <li>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"
+          target="_blank"
+          >Border Radius</a
+        >
+      </li>
+    </ul>
+    <p>Contoh Penggunaan</p>
+    <div>
+      <div
+        style="
+          border: 2px solid black;
+          border-radius: 0px 20px 20px 0px;
+          padding: 10px;
+          width: 200px;
+          background-color: lightgray;
+        ">
+        Ini adalah contoh border dengan border-radius
+      </div>
+    </div>
+  </body>
+</html>
