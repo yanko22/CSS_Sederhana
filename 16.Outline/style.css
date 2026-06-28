@@ -1,0 +1,18 @@
+.ukuran {
+  height: 200px;
+  width: 200px;
+}
+.percobaan1 {
+  background-color: red;
+  border-radius: 0px 15px 0px 15px;
+  border: 10px solid yellow;
+}
+.percobaan2 {
+  background-color: blue;
+  border-radius: 15px 0px 15px 0px;
+  outline: 10px solid yellow;
+}
+.contoh {
+  display: flex;
+  gap: 20px;
+}
