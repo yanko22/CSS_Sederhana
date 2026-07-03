@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opacity</title>
+  </head>
+  <body>
+    <ul>
+      <li>
+        Element di HTML bisa diatur nilai transparansi (opacity) menggunakan
+        properti CSS opacity
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity"
+          >Link dengan opacity</a
+        >
+      </li>
+      <li>
+        Perlu diperhatikan saat menggunakan opacity, semua element baik itu
+        background dan contentnya akan berubah menjadi transparan
+      </li>
+    </ul>
+    <p>contoh</p>
+    <div class="percobaan">
+      <p style="opacity: 0.5">Element dengan opacity 0.5</p>
+    </div>
+    <p>
+      harap diperhatikan dikarenakan menggunakan opacity pada bagian orang tua
+      akan mempengaruhi semua elemen anaknya sebagai mana contoh berikut :
+    </p>
+    <div
+      class="contoh2"
+      style="width: 500px; height: 200px; background-color: red; opacity: 0.5"
+    >
+      <p>Element dengan opacity 0.5</p>
+    </div>
+    <p>contoh tidak menepatkan opacity pada element orang tua</p>
+    <div
+      class="contoh3"
+      style="width: 500px; height: 200px; background-color: yellow"
+    >
+      <p style="opacity: 0.5; color: blue">Element tanpa opacity</p>
+      <p style="opacity: 1; color: blue">Element tanpa opacity</p>
+    </div>
+    pada percobaan diatas element p memiliki nilai warna yang sama hanya pada p
+    pertama kami berikan nilai opacity 0.5 sehingga terlihat lebih transparan
+    dibandingkan dengan p kedua yang tidak diberikan nilai opacity.
+  </body>
+</html>
