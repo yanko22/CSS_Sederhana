@@ -1,0 +1,21 @@
+.percobaan {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  color: green;
+}
+.ukuran {
+  width: 100px;
+  height: 100px;
+}
+.contoh1 {
+  background-color: red;
+}
+.contoh2 {
+  background-color: blue;
+  overflow: auto;
+}
+p {
+  padding: 0px;
+  margin: 0px;
+}
