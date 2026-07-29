@@ -2,5 +2,10 @@
   color: #ff0000;
   background-color: #ffff00;
   font-style: normal;
-  font-weight: ;
+  border-style: solid;
+  border-radius: 5px;
+  text-decoration: none;
+}
+a:visited {
+  color: green;
 }
