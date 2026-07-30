@@ -4,3 +4,26 @@
   font-style: normal;
   font-weight: bold;
 }
+.percobaan3 {
+  margin-top: 20px;
+}
+.percobaan3 a {
+  background-color: #ffff00;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  font-style: sans-serif;
+}
+.percobaan3 a:hover {
+  color: white;
+  background-color: #0000ff;
+  font-style: italic;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 10px;
+  border-color: #ff0000;
+}
+.percobaan3 a:visited {
+  background-color: #00ff00;
+}
