@@ -1,0 +1,22 @@
+.contoh1 .list1 {
+  list-style-type: circle;
+}
+.contoh1 .list2 {
+  list-style-type: square;
+}
+.contoh1 .list3 {
+  list-style-type: "\1F44D";
+}
+.contoh2 ul {
+  list-style-image: url("img/ikon.png");
+}
+
+.contoh3 .list-outside {
+  list-style-position: outside;
+}
+.contoh3 .list-inside {
+  list-style-position: inside;
+}
+.contoh4 ul {
+  list-style: armenian inside url("img/ikon.png");
+}
