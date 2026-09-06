@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Belajar Tabel</h1>
+    <ul>
+      <li>
+        Saat kita membuat element Tabel di HTML, kita akan banyak menggunakan
+        Box Model
+      </li>
+    </ul>
+    <hr />
+    <h2>Table Border</h2>
+    <ul>
+      <li>
+        jika kita ingin mengatur border pada tabel, kita bisa menggunakan Border
+        pada table <code>tr</code>,<code>th</code>,<code>td</code> dan lain-lain
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border "
+          >Border Property - MDN</a
+        >
+      </li>
+      <li>
+        saat menggunakan borde, kadang tiap kolim akan ada jarak, kita ingin
+        menghilangkan jaraknya, kita bisa mnegunakan border-collapse
+      </li>
+      <li>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse"
+          >Border Collapse Property - MDN</a
+        >
+      </li>
+      <li>atau kita bisa juga tambahkan padding pada bagian-bagian tabel</li>
+    </ul>
+
+    <hr />
+    <p>contoh penggunaan</p>
+    <table class="tabel">
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Alamat</th>
+          <th>Umur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rizki</td>
+          <td>Jakarta</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Rizal</td>
+          <td>Jakarta</td>
+          <td>21</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>Tabel Size</h2>
+    <ul>
+      <li>
+        untuk mengatur ukuran tabel, kita bisa menggunakan properti width dan
+        height
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width"
+          >Width Property - MDN</a
+        >
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height"
+          >Height Property - MDN</a
+        >
+      </li>
+    </ul>
+    <hr />
+    <table class="tabel size-border">
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Alamat</th>
+          <th>Umur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rizki</td>
+          <td>Jakarta</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Rizal</td>
+          <td>Jakarta</td>
+          <td>21</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <h2>Tabel Alignment</h2>
+    <ul>
+      <li>
+        Untuk mengatur posisi text pada tabel kita bisa menggunakan property
+        text-align atau writing-mode
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align"
+          >Text Align Property - MDN</a
+        >
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode"
+          >Writing Mode Property - MDN</a
+        >
+      </li>
+    </ul>
+    <hr />
+    <p>penggunaan text align</p>
+    <table class="tabel size-border">
+      <thead>
+        <tr>
+          <th class="text-align-center">Nama</th>
+          <th>Alamat</th>
+          <th>Umur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rizki</td>
+          <td>Jakarta</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Rizal</td>
+          <td>Jakarta</td>
+          <td>21</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
