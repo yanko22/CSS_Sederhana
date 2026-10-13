@@ -1,0 +1,32 @@
+input {
+  margin: 5px;
+}
+input:required {
+  color: red;
+}
+#username {
+  border-style: solid;
+  border-color: gray;
+  border-radius: 10px;
+  padding: 5px;
+}
+#password {
+  border-style: solid;
+  border-color: gray;
+  border-radius: 10px;
+  padding: 5px;
+}
+#submit {
+  border-style: solid;
+  border-color: gray;
+  border-radius: 10px;
+  padding: 5px;
+}
+#submit:hover {
+  background-color: black;
+  color: white;
+}
+#username:focus,
+#password:focus {
+  background-color: black;
+}
