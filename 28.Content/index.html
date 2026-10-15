@@ -1,10 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* using image in content */
+      .image {
+        content: url("ikon.png");
+      }
+      /* using text in content */
+      .text::before {
+        content: "ini menggunakan teks ";
+      }
+      .text::after {
+        content: " di pseudo-element";
+      }
+    </style>
   </head>
   <body>
     <h1>Content</h1>
@@ -31,5 +43,7 @@
       </li>
     </ul>
     <p>contoh penggunaan content</p>
+    <p class="image">ini menggunakan file image</p>
+    <p class="text">ini menggunakan teks</p>
   </body>
 </html>

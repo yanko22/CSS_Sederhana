@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+      body {
+        counter-set: judul 0;
+        counter-set: sub-judul 0;
+        counter-set: sub-sub-judul 0;
+      }
+      .contoh h1 {
+        counter-increment: judul;
+        counter-reset: sub-judul;
+      }
+      .contoh h2 {
+        counter-increment: sub-judul;
+        counter-reset: sub-sub-judul;
+      }
+      .contoh h3 {
+        counter-increment: sub-sub-judul;
+      }
+      .contoh h1::before {
+        content: counter(judul) ". ";
+      }
+      .contoh h2::before {
+        content: counter(judul) "." counter(sub-judul) ". ";
+      }
+      .contoh h3::before {
+        content: counter(judul) "." counter(sub-judul) "."
+          counter(sub-sub-judul) ". ";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <ul>
+      <li>
+        css memiliki kemampuan untuk menmbuat Counter, ini sanggat cocok untuk
+        membuat penomoran tanpa kita harus melakukan secara manual
+      </li>
+      <li>
+        kita bisa gunanakan property counter-set untuk mengatur nilai awal dari
+        counter
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en_US/docs/Web/CSS/counter-set"
+          >counter-set Documentation</a
+        >
+      </li>
+      <li>Property counter-increment untuk menaikan counter</li>
+      <li>
+        <a
+          href="https://developer.mozilla.org/en_US/docs/Web/CSS/counter-increment"
+          >counter-increment Documentation</a
+        >
+      </li>
+      <li>dan property counter-reset untuk mereset counter</li>
+      <li>
+        <a href="https://developer.mozilla.org/en_US/docs/Web/CSS/counter-reset"
+          >counter-reset Documentation</a
+        >
+      </li>
+      <li>
+        untuk mengambil nilai counter, bisa menggunakan function counter()
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en_US/docs/Web/CSS/counter"
+          >counter() Documentation</a
+        >
+      </li>
+    </ul>
+    <h2>contoh penggunaan</h2>
+    <div class="contoh">
+      <h1>judul</h1>
+      <div>
+        <h2>sub judul</h2>
+        <h2>sub judul</h2>
+        <h3>sub sub judul</h3>
+        <h3>sub sub judul</h3>
+      </div>
+      <h1>judul</h1>
+      <div>
+        <h2>sub judul</h2>
+        <h2>sub judul</h2>
+        <h3>sub sub judul</h3>
+        <h3>sub sub judul</h3>
+      </div>
+    </div>
+  </body>
+</html>
