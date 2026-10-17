@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cascade</title>
+  </head>
+  <body>
+    <h1>Cascade</h1>
+    <ul>
+      <li>saat kita menggunakan CSS, kita harus memahami konsep cascade</li>
+      <li>
+        Cascade adalah logika bagaimana web browser mengumpulkan property CSS
+        dari berbagai sumber sebelum diterapkan ke element yang dipilih
+      </li>
+      <li>
+        Web Broeser akan mengambil sumber property CSS dari 3 sumber, Yaitu User
+        Agent, Author dan User
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade"
+          >Dokumentasi Cascade</a
+        >
+      </li>
+    </ul>
+    <h2>User Agent Stylesheet</h2>
+    <ul>
+      <li>
+        user agent atau browser, biasanya memiliki nilai awal untuk stylesheet;
+      </li>
+      <li>
+        tipa User Agent biasanya berbeda, oleh karena itu saat membuat CSS kita
+        harus hati-hati dengan nilai awal User Agent, karena bisa berbeda untuk
+        tiap browser
+      </li>
+      <li>
+        salah satu contoh yang banyak dilakukan oleh programmer adalah,
+        melakuakn reset ke nilai kosong
+      </li>
+      <li>
+        Contoh seperti ini
+        <a
+          href="https://github.com/necolas/normalize.css/blob/master/normalize.css"
+          >Reset Styles</a
+        >
+      </li>
+    </ul>
+  </body>
+</html>
